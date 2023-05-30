@@ -1,10 +1,10 @@
 import Navbar from "@/app/components/navbar"
 
-export default function About() {
+export default function Page() {
   return (
     <>
       <Navbar />
-    <div>About page</div>
+      <div>About page</div>
     </>
   );
 }
