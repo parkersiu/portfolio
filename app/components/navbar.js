@@ -8,14 +8,11 @@ import {
   SunIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import Link from 'next/link'
 
 const projects = [
-  { name: 'Milestone', description: 'A full stack application for managing a project with deadlines', href: '#milestone', icon: RectangleGroupIcon },
-  { name: 'Airport Weather', description: 'A lightweight airport weather tracking application', href: '#airporweather', icon: SunIcon }
-]
-const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
+  { name: 'Milestone', description: 'A full stack application for managing a project with deadlines', href: '/milestone', icon: RectangleGroupIcon },
+  { name: 'Airport Weather', description: 'A lightweight airport weather tracking application', href: '/airport-weather', icon: SunIcon }
 ]
 
 function classNames(...classes) {
@@ -29,10 +26,10 @@ export default function Navbar() {
     <header className="bg-white">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Parker Siu</span>
             <p>Parker Siu</p>
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -71,10 +68,10 @@ export default function Navbar() {
                         <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                       </div>
                       <div className="flex-auto">
-                        <a href={item.href} className="block font-semibold text-gray-900">
+                        <Link href={item.href} className="block font-semibold text-gray-900">
                           {item.name}
                           <span className="absolute inset-0" />
-                        </a>
+                        </Link>
                         <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
                     </div>
@@ -84,27 +81,27 @@ export default function Navbar() {
             </Transition>
           </Popover>
 
-          <a href="/about" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link href="/about" className="text-sm font-semibold leading-6 text-gray-900">
             About Me
-          </a>
-          <a href="#contact" className="text-sm font-semibold leading-6 text-gray-900">
+          </Link>
+          <Link href="/contact" className="text-sm font-semibold leading-6 text-gray-900">
             Contact
-          </a>
+          </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          {/* <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          {/* <Link href="#" className="text-sm font-semibold leading-6 text-gray-900">
             Log in <span aria-hidden="true">&rarr;</span>
-          </a> */}
+          </Link> */}
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Parker Siu</span>
               {/* Insert parker logo */}
-            </a>
+            </Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -142,18 +139,18 @@ export default function Navbar() {
                     </>
                   )}
                 </Disclosure>
-                <a
+                <Link
                   href="#about"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   About
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#contact"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Contact
-                </a>
+                </Link>
               </div>
             </div>
           </div>
