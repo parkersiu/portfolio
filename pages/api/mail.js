@@ -3,10 +3,7 @@ const mail = require('@sendgrid/mail');
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default (req, res) => {
-  const formData = JSON.stringify(req.body);
-  const body = JSON.parse(formData);
-
-  console.log(body);
+  const body = JSON.parse(req.body);
 
   const message = `
   Name: ${body.firstname} ${body.lastname}\r\n

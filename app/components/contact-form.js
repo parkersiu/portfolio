@@ -17,6 +17,7 @@ export default function ContactForm() {
       method: 'POST',
       body: JSON.stringify(formData),
     });
+    // add redirect
   }
 
   return (
@@ -39,7 +40,7 @@ export default function ContactForm() {
           Please use the form below to get in touch.
         </p>
       </div>
-      <form method="post" action='/api/mail' className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form method="post" onSubmit={handleSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="firstname" className="block text-sm font-semibold leading-6 text-gray-900">
@@ -47,6 +48,7 @@ export default function ContactForm() {
             </label>
             <div className="mt-2.5">
               <input
+                required
                 type="text"
                 name="firstname"
                 id="firstname"
@@ -61,6 +63,7 @@ export default function ContactForm() {
             </label>
             <div className="mt-2.5">
               <input
+                required
                 type="text"
                 name="lastname"
                 id="lastname"
@@ -75,6 +78,7 @@ export default function ContactForm() {
             </label>
             <div className="mt-2.5">
               <input
+                required
                 type="text"
                 name="company"
                 id="company"
@@ -89,6 +93,7 @@ export default function ContactForm() {
             </label>
             <div className="mt-2.5">
               <input
+                required
                 type="email"
                 name="email"
                 id="email"
@@ -121,6 +126,7 @@ export default function ContactForm() {
                 />
               </div>
               <input
+                required
                 type="tel"
                 name="phone"
                 id="phone"
