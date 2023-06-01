@@ -9,6 +9,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const projects = [
   { name: 'Milestone', description: 'A full stack application for managing a project with deadlines', href: '/milestone', icon: RectangleGroupIcon },
@@ -28,7 +29,12 @@ export default function Navbar() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Parker Siu</span>
-            <p>Parker Siu</p>
+            <Image
+              src='/logo-no-background.png'
+              width={200}
+              height={200}
+              alt='Logo for Parker Siu'
+            />
           </Link>
         </div>
         <div className="flex lg:hidden">
