@@ -34,6 +34,7 @@ export default function Navbar() {
               width={200}
               height={200}
               alt='Logo for Parker Siu'
+              priority={true}
             />
           </Link>
         </div>
