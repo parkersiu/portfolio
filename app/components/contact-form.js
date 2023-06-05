@@ -1,5 +1,7 @@
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { useRouter } from 'next/navigation';
+import ReCAPTCHA from 'react-google-recaptcha';
+import { useRef } from 'react';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -7,6 +9,7 @@ function classNames(...classes) {
 
 export default function ContactForm() {
   const router = useRouter();
+  const captchaRef = useRef();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -15,11 +18,18 @@ export default function ContactForm() {
       if(!field.name) return;
       formData[field.name] = field.value;
     });
+    formData.token = await captchaRef.current.executeAsync();
+    captchaRef.current.reset();
     const res = await fetch('/api/mail', {
       method: 'POST',
       body: JSON.stringify(formData),
     });
+    const data = await res.json();
+    if (data.error) {
+      alert(`Error: ${data.error}`);
+    } else {
     router.push('/thank-you');
+    }
   }
 
   return (
@@ -140,7 +150,7 @@ export default function ContactForm() {
             </div>
           </div>
         </div>
-        <div className='g-recaptcha mt-10' data-sitekey={process.env.RECAPTCHA_SITE_KEY}></div>
+        <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} size="invisible" ref={captchaRef} />
         <div className="mt-10">
           <button
             type="submit"
