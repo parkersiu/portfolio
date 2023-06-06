@@ -92,7 +92,7 @@ export default function Navbar() {
           </Popover>
 
           <Link href="/about" className="text-sm font-semibold leading-6 text-gray-900">
-            About Me
+            About
           </Link>
           <Link href="/contact" className="text-sm font-semibold leading-6 text-gray-900">
             Contact
