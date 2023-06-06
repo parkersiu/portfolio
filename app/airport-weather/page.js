@@ -48,6 +48,27 @@ export default function Page() {
                   </div>
                 ))}
               </dl>
+              <div className='flex mt-10 justify-between'>
+                <a href='https://github.com/parkersiu/airport-weather' target="_blank"
+                className='flex items-center justify-between rounded-md bg-gray-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm
+                hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+                focus-visible:outline-white'>
+                  <Image
+                    src='/github-logo.png'
+                    alt='github logo'
+                    className='pr-3'
+                    width={30}
+                    height={30}
+                  />
+                  Repository
+                </a>
+                <a href='https://parkersiu.github.io/airport-weather/' target="_blank"
+                  className='flex items-center justify-between rounded-md bg-gray-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm
+                hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+                focus-visible:outline-white'>
+                  Visit Deployed<span aria-hidden="true">→</span>
+                </a>
+              </div>
             </div>
           </div>
           <Image
