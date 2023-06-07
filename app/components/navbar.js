@@ -99,13 +99,35 @@ export default function Navbar() {
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <Link href='https://github.com/parkersiu/' target="_blank"
+            className='flex items-center justify-between rounded-md bg-gray-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm
+                hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+                focus-visible:outline-white mr-6'>
+            <Image
+              src='/github-logo.png'
+              alt='github logo'
+              width={20}
+              height={10}
+            />
+          </Link>
+          <Link href='https://www.linkedin.com/in/parkersiu/' target="_blank"
+            className='flex items-center justify-between rounded-md bg-gray-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm
+                hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+                focus-visible:outline-white'>
+            <Image
+              src='/linked-in.png'
+              alt='linkedin logo'
+              width={20}
+              height={10}
+            />
+          </Link>
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <Link href="#" className="-m-1.5 p-1.5">
+            <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Parker Siu</span>
             </Link>
             <button
@@ -146,17 +168,41 @@ export default function Navbar() {
                   )}
                 </Disclosure>
                 <Link
-                  href="#about"
+                  href="/about"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   About
                 </Link>
                 <Link
-                  href="#contact"
+                  href="/contact"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Contact
                 </Link>
+                <div className='flex'>
+                  <Link href='https://github.com/parkersiu/' target="_blank"
+                    className='flex rounded-md bg-gray-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm
+                  hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+                  focus-visible:outline-white mr-6'>
+                    <Image
+                      src='/github-logo.png'
+                      alt='github logo'
+                      width={20}
+                      height={10}
+                    />
+                  </Link>
+                  <Link href='https://www.linkedin.com/in/parkersiu/' target="_blank"
+                    className='flex rounded-md bg-gray-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm
+                  hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+                  focus-visible:outline-white'>
+                    <Image
+                      src='/linked-in.png'
+                      alt='linkedin logo'
+                      width={20}
+                      height={10}
+                    />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
