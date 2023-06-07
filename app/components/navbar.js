@@ -99,7 +99,7 @@ export default function Navbar() {
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href='https://github.com/parkersiu/' target="_blank"
+          <Link href='https://github.com/parkersiu/' target="_blank"
             className='flex items-center justify-between rounded-md bg-gray-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm
                 hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
                 focus-visible:outline-white mr-6'>
@@ -109,8 +109,8 @@ export default function Navbar() {
               width={20}
               height={10}
             />
-          </a>
-          <a href='https://www.linkedin.com/in/parkersiu/' target="_blank"
+          </Link>
+          <Link href='https://www.linkedin.com/in/parkersiu/' target="_blank"
             className='flex items-center justify-between rounded-md bg-gray-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm
                 hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
                 focus-visible:outline-white'>
@@ -120,7 +120,7 @@ export default function Navbar() {
               width={20}
               height={10}
             />
-          </a>
+          </Link>
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -180,7 +180,7 @@ export default function Navbar() {
                   Contact
                 </Link>
                 <div className='flex'>
-                  <a href='https://github.com/parkersiu/' target="_blank"
+                  <Link href='https://github.com/parkersiu/' target="_blank"
                     className='flex rounded-md bg-gray-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm
                   hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
                   focus-visible:outline-white mr-6'>
@@ -190,8 +190,8 @@ export default function Navbar() {
                       width={20}
                       height={10}
                     />
-                  </a>
-                  <a href='https://www.linkedin.com/in/parkersiu/' target="_blank"
+                  </Link>
+                  <Link href='https://www.linkedin.com/in/parkersiu/' target="_blank"
                     className='flex rounded-md bg-gray-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm
                   hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
                   focus-visible:outline-white'>
@@ -201,7 +201,7 @@ export default function Navbar() {
                       width={20}
                       height={10}
                     />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
