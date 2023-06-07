@@ -37,7 +37,7 @@ export default function ContactForm() {
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact Me</h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">
-          Please use the form below to get in touch.
+          Please use this form to get in touch or reach me on LinkedIn via the link above.
         </p>
       </div>
       <form method="post" onSubmit={handleSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
@@ -156,7 +156,7 @@ export default function ContactForm() {
             type="submit"
             className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
-            Let&apos;s talk
+            Send
           </button>
         </div>
       </form>
