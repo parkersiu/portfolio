@@ -10,7 +10,7 @@ export default async (req, res) => {
 
   if (!human) {
     res.status(400);
-    res.json({ error: 'Recaptcha failed.' });
+    res.json({ error: 'Recaptcha failed. Please try again.' });
     return
   } else {
     const message = `
