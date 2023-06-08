@@ -1,7 +1,8 @@
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { useRouter } from 'next/navigation';
 import ReCAPTCHA from 'react-google-recaptcha';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import { BeatLoader } from 'react-spinners';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -10,8 +11,10 @@ function classNames(...classes) {
 export default function ContactForm() {
   const router = useRouter();
   const captchaRef = useRef();
+  const [loading, setLoading] = useState(false);
 
   async function handleSubmit(e) {
+    setLoading(!loading);
     e.preventDefault();
     const formData = {};
     Array.from(e.currentTarget.elements).forEach(field => {
@@ -25,6 +28,7 @@ export default function ContactForm() {
       body: JSON.stringify(formData),
     });
     const data = await res.json();
+    setLoading(false);
     if (data.error) {
       alert(`Error: ${data.error}`);
     } else {
@@ -156,7 +160,7 @@ export default function ContactForm() {
             type="submit"
             className="block w-full rounded-md bg-blue-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
           >
-            Send
+            {loading ? <BeatLoader color='#fff' /> : "Send"}
           </button>
         </div>
       </form>
