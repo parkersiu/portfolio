@@ -7,7 +7,6 @@ export default async (req, res) => {
   const body = JSON.parse(req.body);
 
   const human = await validate(body.token);
-  console.log(human);
 
   if (!human) {
     res.status(400);
