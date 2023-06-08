@@ -39,6 +39,6 @@ export default async (req, res) => {
       method: 'post',
     });
     const data = await response.json();
-    return false;
+    return data;
   }
 }
