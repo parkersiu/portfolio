@@ -10,12 +10,15 @@ export const metadata = {
   description: 'A developer portfolio for Parker Siu',
 }
 
+import { Analytics } from '@vercel/analytics/react';
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-white">
+      <body className='bg-white'>
         <Navbar />
         {children}
+        <Analytics />
       </body>
       <Script src='https://www.google.com/recaptcha/api.js' async defer />
     </html>

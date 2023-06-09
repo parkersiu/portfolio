@@ -22,7 +22,7 @@ const features = [
   {
     name: 'Others',
     description:
-      'Git',
+      'Git | AWS | Vercel',
     icon: EllipsisHorizontalIcon,
   },
 ]
